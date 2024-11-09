@@ -1,0 +1,105 @@
+.footer {
+    width: 100%;
+    padding-block: 1.5rem;
+    position: relative;
+}
+
+.footer_box {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr repeat(2, 1fr) 2fr;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/* Ikon Media Sosial */
+.footer_social {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.footer_social a {
+    padding: 0.2rem;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+    display: grid;
+}
+
+.footer_social a:hover {
+    background-color: var(--icons-color);
+    color: var(--shadow-dark-color);
+    box-shadow: var(--box-shadow);
+}
+
+/* Kotak Berlangganan */
+.subscribe_box {
+    width: 100%;
+    max-width: 400px; /* Batasi lebar maksimal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem; /* Padding lebih kecil */
+    background-color: var(--icons-color);
+    color: var(--shadow-dark-color);
+    border-radius: 5rem;
+    margin-top: 2rem;
+}
+
+.subscribe_box input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 70%; /* Lebar lebih kecil */
+    color: var(--shadow-dark-color);
+    font-size: 0.9rem;
+    padding: 0.3rem;
+}
+
+.subscribe_box input::placeholder {
+    color: var(--shadow-dark-color);
+    opacity: 0.7;
+}
+
+.subscribe_box_send {
+    cursor: pointer;
+    font-size: 1.4rem; /* Ukuran font lebih kecil */
+    color: var(--footer-send-icon-color);
+    transition: color 0.3s;
+}
+
+/* Desain Responsif */
+@media screen and (max-width: 45em) {
+    .footer_box {
+        width: 90%;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 35em) {
+    .footer_box {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    /* Penyesuaian subscribe_box di layar kecil */
+    .subscribe_box {
+        max-width: 100%; /* Sesuaikan dengan lebar layar */
+        padding: 0.6rem 0.8rem; /* Padding lebih kecil di layar kecil */
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .subscribe_box input {
+        width: 100%; /* Input memenuhi lebar kotak */
+        font-size: 0.8rem;
+        padding: 0.2rem; /* Padding kecil untuk tampilan ringkas */
+    }
+
+    .subscribe_box_send {
+        font-size: 1rem; /* Ukuran font kecil untuk tampilan ringkas */
+    }
+}

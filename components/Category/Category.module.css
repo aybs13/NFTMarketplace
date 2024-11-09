@@ -1,0 +1,122 @@
+/* Container utama untuk kategori */
+.box_category {
+    width: 100%;
+    max-width: 1200px; /* Membatasi lebar maksimal untuk layar besar */
+    margin: 3rem auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center; /* Memastikan konten berada di tengah */
+    align-items: center;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+}
+
+/* Grid Kategori */
+.category {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default 4 kolom untuk layar besar */
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%; /* Membuat grid tidak melebihi kontainer */
+    justify-content: center; /* Memastikan grid tetap berada di tengah */
+    padding: 4rem 0;
+    box-sizing: border-box;
+}
+
+/* Box kategori individual */
+.category_box {
+    line-height: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%; /* Membatasi lebar maksimal */
+}
+
+.category_box:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-10px);
+}
+
+/* Gambar di dalam box kategori */
+.category_box_img {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Judul di dalam box kategori */
+.category_box_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+/* Icon atau gambar kecil di sebelah judul */
+.category_box_title span {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+    color: var(--icon-color);
+}
+
+/* Responsif untuk layar sedang (maksimal 1024px) */
+@media screen and (max-width: 1024px) {
+    .box_category {
+        padding: 1rem 0;
+    }
+    
+    .category {
+        grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 kolom */
+    }
+}
+
+/* Responsif untuk layar kecil (maksimal 775px) */
+@media screen and (max-width: 775px) {
+    .box_category {
+        padding: 1rem 0;
+    }
+    
+    .category {
+        grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom */
+        gap: 1.5rem;
+    }
+
+    .category_box_title {
+        font-size: 1.6rem;
+    }
+
+    .category_box_title span {
+        font-size: 2rem;
+    }
+}
+
+/* Responsif untuk layar sangat kecil (maksimal 425px) */
+@media screen and (max-width: 425px) {
+    .box_category {
+        padding: 1rem 0;
+    }
+
+    .category {
+        grid-template-columns: 1fr; /* Menampilkan 1 kolom */
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .category_box_title {
+        font-size: 1.5rem;
+    }
+
+    .category_box_title span {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,102 @@
+.sideBar_box {
+    padding: 2rem;
+    border-bottom: 1px solid var(--icons-color);
+    background-color: var(--main-bg-color);
+}
+
+.sideBar_closeBtn {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease-in-out;
+}
+
+.sideBar_closeBtn:hover {
+    transform: rotate(45deg);
+}
+
+.sideBar_box p {
+    margin-top: -2rem;
+}
+
+/* Social Media Section */
+.sideBar_social {
+    display: flex;
+    gap: 1.3rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.sideBar_social a {
+    padding: 0.2rem;
+    border-radius: 50%;
+    display: grid;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+.sideBar_social a:hover {
+    background-color: var(--icons-color);
+    color: var(--shadow-dark-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Menu */
+.sideBar_menu {
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid var(--icons-color);
+}
+
+.sideBar_menu_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Discover Section */
+.sideBar_discover {
+    padding-inline: 1rem;
+}
+
+/* Button Section */
+.sideBar_button {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sideBar_button button {
+    flex: 1; /* Membuat kedua tombol memiliki lebar yang sama */
+    padding: 0.8rem; /* Padding yang seragam */
+    border-radius: 2rem;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sideBar_button button:hover {
+    background-color: var(--icons-hover-bg-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 500px) {
+    .sideBar_button {
+        flex-direction: column; /* Atur tombol menjadi vertikal */
+        gap: 0.8rem;
+    }
+
+    .sideBar_button button {
+        width: 100%; /* Memenuhi lebar penuh pada perangkat kecil */
+        padding: 0.5rem;
+    }
+}

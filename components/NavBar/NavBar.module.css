@@ -1,0 +1,160 @@
+.navbar {
+    width: 100%;
+    padding-block: 1.5rem;
+    position: relative;
+    z-index: 10; /* Menurunkan z-index ke nilai yang lebih wajar */
+}
+
+.navbar_container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.navbar_container_left {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Input box styling */
+.navbar_container_left_box_input_box {
+    width: 60%;
+    border: 1px solid var(--icons-color);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.navbar_container_left_box_input_box input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--main-text-color); /* Menyesuaikan warna teks */
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+/* Icon styling */
+.search_icon {
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+/* Right section styling */
+.navbar_container_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 1fr 0.3fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar_container_right_help {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar_container_right_discover_box,
+.navbar_container_right_help_box {
+    position: absolute;
+    padding: 1rem 0.5rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color);
+    z-index: 5; /* Menambah z-index agar elemen overlay muncul di atas */
+}
+
+.navbar_container_right_notify {
+    position: relative;
+    cursor: pointer;
+}
+
+.notify {
+    font-size: 2rem;
+}
+
+.navbar_container_right_button {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar_container_right_profile_box {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar_container_right_profile {
+    border-radius: 50%;
+}
+
+.navbar_container_right_menuBtn {
+    display: none;
+}
+
+.menuIcon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* SIDEBAR MENU */
+.sideBar {
+    position: fixed;
+    top: 0;
+    width: 24rem;
+    background-color: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+    z-index: 20; /* Menyesuaikan z-index agar tidak terlalu tinggi */
+}
+
+.sideBar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .navbar_container {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar_container_left {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .navbar_container_right {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .navbar_container_right_menuBtn {
+        display: block;
+    }
+
+    .navbar_container_left_box_input_box {
+        display: none;
+    }
+
+    .navbar_container_right_discover,
+    .navbar_container_right_help,
+    .navbar_container_right_button {
+        display: none;
+    }
+
+    .sideBar {
+        display: block;
+        width: 20rem; /* Mengurangi lebar sidebar pada layar kecil */
+    }
+}

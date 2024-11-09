@@ -1,0 +1,73 @@
+.notification {
+    position: absolute;
+    padding: 2rem 1rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    width: 25rem;
+    border-radius: 1rem;
+    left: -20rem;
+    top: 3.5rem;
+    z-index: 10; /* Z-index lebih wajar */
+    background-color: var(--main-bg-color);
+}
+
+.notification > p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.notification_box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+}
+
+.notification_box:hover {
+    background-color: var(--icons-color);
+    color: var(--shadow-dark-color);
+    border-radius: 0.3rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow halus saat hover */
+}
+
+.notification_box_img {
+    border-radius: 50%;
+}
+
+.notification_box_info {
+    line-height: 1.2; /* Line height lebih sesuai */
+    margin-top: -0.8rem;
+}
+
+.notification_box_info h4 {
+    font-weight: 600;
+}
+
+.notification_box_info p {
+    font-size: 15px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.notification_box_new {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 35em) {
+    .notification {
+        width: 20rem;
+        left: -15rem;
+    }
+    .notification_box {
+        gap: 0.3rem;
+    }
+    .notification_box_info p {
+        font-size: 12px;
+    }
+}

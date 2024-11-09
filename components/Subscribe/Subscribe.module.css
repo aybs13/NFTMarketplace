@@ -1,0 +1,169 @@
+/* Container Subscribe */
+.subscribe {
+    width: 100%;
+    background-color: var(--main-bg-color);
+    padding: 5rem 0;
+}
+
+/* Kotak Utama Subscribe */
+.subscribe_box {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+}
+
+/* Gambar di dalam subscribe_box_right */
+.subscribe_box_right img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading untuk subscribe_box_left */
+.subscribe_box_left h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Deskripsi dalam subscribe_box_left */
+.subscribe_box p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Tombol dan Informasi pada subscribe_box_left */
+.subscribe_box_left_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribe_box_left_box small {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light-color);
+}
+
+.subscribe_box_left_box span {
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe_box_left_box span:hover {
+    background-color: var(--hover-color);
+}
+
+/* Input dan tombol subscribe */
+.subscribe_box_left_input {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 3rem;
+    background-color: var(--icons-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe_box_left_input input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: var(--main-bg-color);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    line-height: 1.6;
+    text-align: left; /* Menyelaraskan teks kiri */
+}
+
+/* Placeholder yang lebih rapi */
+.subscribe_box_left_input input::placeholder {
+    color: var(--shadow-dark-color);
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+    padding-left: 0.5rem; /* Menambahkan padding kiri agar lebih rata */
+    line-height: normal; /* Mengatur line-height agar placeholder terpusat */
+}
+
+.subscribe_box_left_input_icon {
+    font-size: 1.5rem;
+    color: var(--main-bg-color);
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .subscribe_box {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2.5rem 1rem;
+        text-align: center;
+    }
+
+    .subscribe_box_right img {
+        max-width: 300px;
+    }
+
+    .subscribe_box_left h2 {
+        font-size: 2rem;
+    }
+
+    .subscribe_box p {
+        font-size: 1rem;
+    }
+
+    .subscribe_box_left_input {
+        max-width: 280px;
+        padding: 0.7rem 1rem;
+    }
+}
+
+/* Responsif untuk layar sangat kecil (320px - 425px) */
+@media screen and (max-width: 425px) {
+    .subscribe_box {
+        width: 95%;
+        padding: 2rem 0;
+    }
+
+    .subscribe_box_right img {
+        max-width: 250px;
+    }
+
+    .subscribe_box_left h2 {
+        font-size: 1.8rem;
+    }
+
+    .subscribe_box p {
+        font-size: 0.9rem;
+    }
+
+    .subscribe_box_left_input {
+        padding: 0.7rem;
+    }
+}
