@@ -1,0 +1,142 @@
+/* Container utama untuk seluruh NFT Card */
+.NFTCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Setiap Card NFT */
+.NFTCard_box {
+    position: relative;
+    background-color: var(--main-bg-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.NFTCard_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Area Gambar dalam NFT Card */
+.NFTCard_box_img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.NFTCard_box_img_img {
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Bagian untuk Update (Like dan Timer) */
+.NFTCard_box_update {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Bagian kiri (like icon) */
+.NFTCard_box_update_left {
+    display: flex;
+    align-items: center;
+    color: #555;
+    gap: 0.5rem;
+}
+
+.NFTCard_box_update_left_like {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.NFTCard_box_update_left_like:hover {
+    color: #e63946;
+}
+
+/* Ikon 'like' */
+.NFTCard_box_update_left_like_icon {
+    color: #e63946;
+}
+
+/* Bagian kanan (waktu tersisa) */
+.NFTCard_box_update_right_info {
+    text-align: right;
+    color: #333;
+}
+
+.NFTCard_box_update_right_info small {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.NFTCard_box_update_right_info p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+/* Detail Harga dan Stok */
+.NFTCard_box_update_details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.NFTCard_box_update_details_price_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.NFTCard_box_update_details_price_box h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.NFTCard_box_update_details_price_box small {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.NFTCard_box_update_details_price_box_bid {
+    margin-bottom: 0.3rem;
+}
+
+.NFTCard_box_update_details_price_box_bid p {
+    font-weight: bold;
+    color: #333;
+}
+
+.NFTCard_box_update_details_price_box_stock {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+/* Kategori Ikon */
+.NFTCard_box_update_details_category {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .NFTCard {
+        grid-template-columns: 1fr;
+    }
+
+    .NFTCard_box {
+        margin: 0 auto;
+    }
+}

@@ -1,22 +1,34 @@
+/* Sidebar Container */
 .sideBar_box {
     padding: 2rem;
     border-bottom: 1px solid var(--icons-color);
     background-color: var(--main-bg-color);
+    height: 100vh; /* Full height for sidebar */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
+/* Close Button Styling */
 .sideBar_closeBtn {
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     right: 2rem;
     cursor: pointer;
     box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    background-color: var(--icons-color);
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: var(--main-bg-color);
 }
 
 .sideBar_closeBtn:hover {
     transform: rotate(45deg);
+    background-color: var(--icons-hover-bg-color);
 }
 
+/* Text and Menu Sections */
 .sideBar_box p {
     margin-top: -2rem;
 }
@@ -30,10 +42,10 @@
 }
 
 .sideBar_social a {
-    padding: 0.2rem;
+    padding: 0.5rem;
     border-radius: 50%;
     display: grid;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in, box-shadow 0.3s ease;
 }
 
 .sideBar_social a:hover {
@@ -42,7 +54,7 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Sidebar Menu */
+/* Sidebar Menu Section */
 .sideBar_menu {
     padding: 2rem;
     text-transform: uppercase;
@@ -90,6 +102,10 @@
 
 /* Responsif untuk layar kecil */
 @media screen and (max-width: 500px) {
+    .sideBar_box {
+        padding: 1rem; /* Mengurangi padding pada layar kecil */
+    }
+
     .sideBar_button {
         flex-direction: column; /* Atur tombol menjadi vertikal */
         gap: 0.8rem;
@@ -97,6 +113,25 @@
 
     .sideBar_button button {
         width: 100%; /* Memenuhi lebar penuh pada perangkat kecil */
-        padding: 0.5rem;
+        padding: 0.8rem; /* Mengatur padding tombol lebih nyaman */
+    }
+
+    /* Social Media icons */
+    .sideBar_social {
+        gap: 1rem;
+        font-size: 1.2rem; /* Mengurangi ukuran ikon sosial media di layar kecil */
+    }
+
+    /* Sidebar menu padding dan font size */
+    .sideBar_menu {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust sidebar height on medium screen sizes */
+    .sideBar_box {
+        height: auto; /* Sidebar height adjusts with content */
     }
 }

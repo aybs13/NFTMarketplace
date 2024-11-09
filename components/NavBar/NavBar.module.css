@@ -1,3 +1,4 @@
+/* NAVBAR CONTAINER */
 .navbar {
     width: 100%;
     padding-block: 1.5rem;
@@ -15,6 +16,7 @@
     gap: 1rem;
 }
 
+/* LEFT SECTION */
 .navbar_container_left {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -48,7 +50,7 @@
     font-size: 1.4rem;
 }
 
-/* Right section styling */
+/* RIGHT SECTION STYLING */
 .navbar_container_right {
     display: grid;
     grid-template-columns: 1fr 1fr 0.5fr 1fr 0.3fr;
@@ -92,8 +94,18 @@
     cursor: pointer;
 }
 
+/* PROFILE ICON */
 .navbar_container_right_profile {
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar_container_right_profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar_container_right_menuBtn {
@@ -115,14 +127,16 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    z-index: 20; /* Menyesuaikan z-index agar tidak terlalu tinggi */
+    z-index: 20;
 }
 
 .sideBar::-webkit-scrollbar {
     display: none;
 }
 
-/* Responsif */
+/* RESPONSIVE STYLES */
+
+/* Media Query for small screens */
 @media screen and (max-width: 768px) {
     .navbar_container {
         width: 90%;
@@ -156,5 +170,32 @@
     .sideBar {
         display: block;
         width: 20rem; /* Mengurangi lebar sidebar pada layar kecil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust font size */
+    .notify {
+        font-size: 1.6rem;
+    }
+
+    .search_icon {
+        font-size: 1.4rem;
+    }
+
+    /* Adjust menu icon and button */
+    .menuIcon {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Profile icon size adjustment on smaller screens */
+    .navbar_container_right_profile {
+        width: 35px;
+        height: 35px;
     }
 }
