@@ -1,29 +1,29 @@
 /* Container utama untuk kategori */
 .box_category {
     width: 100%;
-    max-width: 1200px; /* Membatasi lebar maksimal untuk layar besar */
+    max-width: 1200px;
     margin: 3rem auto;
     padding: 2rem 0;
     display: flex;
-    justify-content: center; /* Memastikan konten berada di tengah */
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+    box-sizing: border-box;
 }
 
 /* Grid Kategori */
 .category {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default 4 kolom untuk layar besar */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
-    max-width: 100%; /* Membuat grid tidak melebihi kontainer */
-    justify-content: center; /* Memastikan grid tetap berada di tengah */
     padding: 4rem 0;
+    justify-content: center;
     box-sizing: border-box;
 }
 
 /* Box kategori individual */
 .category_box {
+    width: 100%;
     line-height: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 1rem;
@@ -35,8 +35,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
-    max-width: 100%; /* Membatasi lebar maksimal */
 }
 
 .category_box:hover {
@@ -46,9 +44,9 @@
 
 /* Gambar di dalam box kategori */
 .category_box_img {
-    border-radius: 1rem 1rem 0 0;
     width: 100%;
     height: auto;
+    border-radius: 1rem 1rem 0 0;
 }
 
 /* Judul di dalam box kategori */
@@ -74,9 +72,8 @@
     .box_category {
         padding: 1rem 0;
     }
-    
     .category {
-        grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 kolom */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -85,16 +82,13 @@
     .box_category {
         padding: 1rem 0;
     }
-    
     .category {
-        grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom */
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
-
     .category_box_title {
         font-size: 1.6rem;
     }
-
     .category_box_title span {
         font-size: 2rem;
     }
@@ -105,17 +99,14 @@
     .box_category {
         padding: 1rem 0;
     }
-
     .category {
-        grid-template-columns: 1fr; /* Menampilkan 1 kolom */
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         justify-content: center;
     }
-
     .category_box_title {
         font-size: 1.5rem;
     }
-
     .category_box_title span {
         font-size: 1.8rem;
     }

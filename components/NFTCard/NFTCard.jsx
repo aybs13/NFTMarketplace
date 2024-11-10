@@ -9,11 +9,10 @@ import images from '../../img';
 
 const NFTCard = () => {
     const featureArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
     const [like, setLike] = useState(true);
 
     const likeNft = () => {
-        if(!like) {
+        if (!like) {
             setLike(true);
         } else {
             setLike(false);
@@ -34,36 +33,35 @@ const NFTCard = () => {
                         />
                     </div>
 
-                    <div className={Style.NFTCard_box_update}>
-                        <div className={Style.NFTCard_box_update_left}>
+                    <div className={Style.NFTcard_box_update}>
+                        <div className={Style.NFTcard_box_update_left}>
                             <div 
-                                className={Style.NFTCard_box_update_left_like} 
-                                onClick={()=> likeNft()}
+                                className={Style.NFTcard_box_update_left_like} 
+                                onClick={likeNft}
                             >
-                                {like ?(
+                                {like ? (
                                     <AiOutlineHeart />
                                 ) : (
-                                    <AiFillHeart className={Style.NFTCard_box_update_left_like_icon} 
-                                    />   
+                                    <AiFillHeart className={Style.NFTcard_box_update_left_like_icon} />   
                                 )}
-                                {""} 22
+                                {" "}22
                             </div>
                         </div>
 
-                        <div className={Style.NFTCard_box_update_right}>
-                            <div className={Style.NFTCard_box_update_right_info}>
+                        <div className={Style.NFTcard_box_update_right}>
+                            <div className={Style.NFTcard_box_update_right_info}>
                                 <small>Remaining time</small>
                                 <p>3h : 15m :20s</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className={Style.NFTCard_box_update_details}>
-                        <div className={Style.NFTCard_box_update_details_price}>
+                    <div className={Style.NFTcard_box_update_details}>
+                        <div className={Style.NFTcard_box_update_details_price}>
                             <div className={Style.NFTCard_box_update_details_price_box}>
                                 <h4>Clone #17373</h4>
 
-                                <div className={Style.NFTCard_box_update_details_price_box_boxe}>
+                                <div className={Style.NFTCard_box_update_details_price_box_box}>
                                     <div className={Style.NFTCard_box_update_details_price_box_bid}>
                                         <small>Current bid</small>
                                         <p>1.000ETH</p>
@@ -74,7 +72,7 @@ const NFTCard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={Style.NFTCard_box_update_details_category}>
+                        <div className={Style.NFTcard_box_update_details_category}>
                             <BsImages />
                         </div>
                     </div>
