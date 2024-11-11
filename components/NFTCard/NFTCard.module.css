@@ -82,11 +82,11 @@
 
 .NFTcard_box_update_right {
     background-color: var(--shadow-light-color);
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 7rem;
     text-align: center;
     transform: skewX(45deg);
     border-bottom-left-radius: 1rem;
-    margin-right: -2rem;
+    margin-right: -3rem;
 }
 
 .NFTcard_box_update_right_info {
@@ -95,8 +95,12 @@
 }
 
 .NFTcard_box_update_right_info p {
-    font-size: 1.2rem;
-    font-weight: 800;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.NFTcard_box_update_right_info small{
+    font-size: 1.3rem;
 }
 
 /* Detail harga */
@@ -116,12 +120,17 @@
     margin-left: -3rem;
     padding: 0 0 0.5rem;
     transform: skewX(45deg);
-    border-top-right-radius: 1rem;
+    border-top-right-radius: 2rem;
 }
 
 .NFTCard_box_update_details_price_box {
     transform: skewX(-45deg);
-    padding-left: 3rem;
+    padding-left: 4rem;
+}
+
+.NFTCard_box_update_details_price_box_stock small{
+    margin-right: 3rem;
+    font-size: 1.2rem;
 }
 
 .NFTCard_box_update_details_price_box h4 {
@@ -171,6 +180,11 @@
     .NFTcard_box_update_right_info p {
         font-size: 1rem;
     }
+    
+
+    .NFTCard_box_update_details_price_box h4{
+        font-size: 1.0rem;
+    }
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
@@ -189,5 +203,49 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     .NFTCard {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+        .NFTcard_box_update_right {
+            padding: 0.5rem 1.5rem; /* Reduce padding for a more compact look */
+            font-size: 0.9rem; /* Adjust font size for readability */
+            border-bottom-left-radius: 1rem;
+            margin-right: -1rem;
+            transform: skewX(45deg);
+        }
+    
+        .NFTcard_box_update_right_info {
+            transform: skewX(-45deg);
+            background-color: var(--shadow-light-color);
+            text-align: center;
+        }
+    
+        .NFTcard_box_update_right_info small {
+            font-size: 1rem; /* Smaller font for 'Remaining time' */
+            margin-left: 1rem;
+            color: var(--secondary-text-color); /* Slight color adjustment for contrast */
+        }
+    
+        .NFTcard_box_update_right_info p {
+            font-size: 1.2rem; /* Larger font for the timer */
+            font-weight: 600; /* Enhance readability */
+            color: var(--primary-text-color);
+            margin: 0.3rem 0; /* Space out elements vertically */
+            margin-left: 0.5rem;
+            margin-top: 1.8rem;
+        }
+
+        .NFTCard_box_update_details_price_box h4{
+            font-size: 1.1rem;
+        }
+
+        .NFTCard_box_update_details_price_box_bid small{
+            font-size: 0.7rem;
+        }
+
+        .NFTCard_box_update_details_price_box_stock small{
+            font-size: 0.6rem;
+            margin: auto;
+        }
     }
 }

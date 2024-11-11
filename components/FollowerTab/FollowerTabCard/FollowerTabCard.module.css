@@ -1,0 +1,140 @@
+/* FollowerTabCard.module.css */
+
+.FollowerTabCard_box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--main-bg-color);
+    border-radius: 2rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.FollowerTabCard_box:hover {
+    box-shadow: var(--box-shadow);
+}
+
+/* Rank indicator styling */
+.FollowerTabCard_rank {
+    position: absolute;
+    z-index: 11111;
+    background-color: var(--icons-color);
+    color: var(--main-bg-color);
+    line-height: 0;
+    margin: 1rem;
+    font-size: .8rem;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--icons-color);
+    transition: all .3s ease-in;
+}
+
+.FollowerTabCard_rank:hover {
+    background-color: var(--main-bg-color);
+    color: var(--icons-color);
+}
+
+/* Profile Image and Background Styling */
+.FollowerTabCard_box_img {
+    grid-column: 1 / -1;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.FollowerTabCard_box_img_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.FollowerTabCard_box_profile {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: -2.5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.FollowerTabCard_box_profile_img {
+    border-radius: 50%;
+    border: 3px solid var(--main-bg-color);
+    width: 60px;
+    height: 60px;
+}
+
+.FollowerTabCard_box_profile::before {
+    content: "";
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Info Section Styling */
+.FollowerTabCard_box_info {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.FollowerTabCard_box_info h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.FollowerTabCard_box_info_following a {
+    background-color: var(--shadow-dark-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--shadow-dark-color);
+    color: var(--icons-color);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.FollowerTabCard_box_info_following a:hover {
+    background-color: transparent;
+    color: var(--shadow-dark-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .FollowerTabCard_box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .FollowerTabCard_box_profile::before {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .FollowerTabCard_box_profile_img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .FollowerTabCard_box {
+        grid-template-columns: 1fr;
+    }
+
+    .FollowerTabCard_box_profile::before {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .FollowerTabCard_box_profile_img {
+        width: 45px;
+        height: 45px;
+    }
+}

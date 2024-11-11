@@ -2,7 +2,6 @@
     margin: 0 auto;
     width: 80%;
     padding-block: 5rem;
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
@@ -11,14 +10,14 @@
 
 /* Kotak Kiri */
 .bigNFTSlider_box_left {
-    grid-column: 1 /7;
+    grid-column: 1 / 7;
     grid-row: 1 / -1;
     background-color: var(--main-bg-color);
     box-shadow: var(--box-shadow-2);
     border-radius: 1rem;
     padding: 2rem;
     z-index: 111;
-    height: 85vh; /* Set tinggi kotak kiri */
+    height: 85vh;
 }
 
 .bigNFTSlider_box_left h2 {
@@ -199,16 +198,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    padding-top: 2rem;
+    gap: 5rem;
+    padding-top: 3rem;
 }
 
 .bigNFTSlider_box_left_sliderBtn {
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 3rem;
-    margin-top: 3rem;
+    font-size: 2.5rem;
+    margin-top: 5rem;
 }
 
 .bigNFTSlider_box_left_sliderBtn_icon {
@@ -295,5 +294,9 @@
         border-radius: 3rem; /* Menyesuaikan border-radius agar tetap proporsional */
     }
 }
+
+
+
+
 
 
