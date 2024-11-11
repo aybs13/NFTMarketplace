@@ -55,9 +55,13 @@
 }
 
 .followerTab_member_box {
+    width: 80%;
     margin: 0 auto;
     padding-top: 7rem;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center; /* tambahan opsional jika ingin konten berada di tengah */
 }
 
 .followerTab_member_box a:first-child {

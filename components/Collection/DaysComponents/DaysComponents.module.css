@@ -71,7 +71,7 @@
     border-radius: .5rem;
 }
 
-@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {    
     .daysComponent_box_profile{
         grid-template-columns: repeat(3, 1fr);
     }

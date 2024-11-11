@@ -77,7 +77,7 @@
 }
 
 .NFTcard_box_update_left_like_icon {
-    color: red;
+    color: var(--main-bg-color);
 }
 
 .NFTcard_box_update_right {
@@ -170,6 +170,12 @@
 }
 
 /* Responsif */
+@media (min-width: 320px) and (max-width: 425px){
+    .NFTCard_box_update_details_price_box_stock small{
+        font-size: 0.5rem;
+        padding: 0.1rem;
+    }
+}
 @media (max-width: 425px) {
     .NFTCard {
         grid-template-columns: 1fr;
@@ -196,7 +202,13 @@
         padding: 0.5rem 2rem;
     }
     .NFTcard_box_update_right_info p {
+        font-size: 1.3rem;
+        margin-right: 1rem;
+    }
+    .NFTcard_box_update_right_info small {
         font-size: 1rem;
+        display: flex;
+        margin-left: 1rem;
     }
 }
 
@@ -221,7 +233,7 @@
         }
     
         .NFTcard_box_update_right_info small {
-            font-size: 1rem; /* Smaller font for 'Remaining time' */
+            font-size: 0.9rem; /* Smaller font for 'Remaining time' */
             margin-left: 1rem;
             color: var(--secondary-text-color); /* Slight color adjustment for contrast */
         }
@@ -244,7 +256,7 @@
         }
 
         .NFTCard_box_update_details_price_box_stock small{
-            font-size: 0.6rem;
+            font-size: 0.1rem;
             margin: auto;
         }
     }
