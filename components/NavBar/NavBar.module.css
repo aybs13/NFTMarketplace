@@ -1,124 +1,119 @@
-/* NAVBAR CONTAINER */
-.navbar {
+
+.navbar{
     width: 100%;
     padding-block: 1.5rem;
     position: relative;
-    z-index: 10; /* Menurunkan z-index ke nilai yang lebih wajar */
+    z-index: 111111111;
 }
 
-.navbar_container {
+.navbar_container{
     width: 80%;
-    margin: 0 auto;
-    display: grid;
+    margin:  0 auto;
+
+    display:  grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
 }
 
-/* LEFT SECTION */
-.navbar_container_left {
+.navbar_container_left{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 1rem;
+    align-items:  center;
 }
 
-/* Input box styling */
-.navbar_container_left_box_input_box {
+.logo{
+  color: var(--icons-color);
+  font-size: 4rem;
+}
+
+.navbar_container_left_box_input_box{
     width: 60%;
     border: 1px solid var(--icons-color);
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: .5rem;
     border-radius: 2rem;
 }
 
-.navbar_container_left_box_input_box input {
+.navbar_container_left_box_input_box input{
     width: 90%;
     border: none;
     outline: none;
-    background-color: transparent;
-    color: var(--main-text-color); /* Menyesuaikan warna teks */
-    font-size: 1rem;
-    padding: 0.5rem;
+    background-color:  transparent;
 }
 
-/* Icon styling */
-.search_icon {
+.search_icon{
     cursor: pointer;
     font-size: 1.4rem;
 }
 
-/* RIGHT SECTION STYLING */
-.navbar_container_right {
+/* //-------RIGHT */
+
+.navbar_container_right{
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr 1fr 0.3fr;
+    grid-template-columns: 1fr 1fr .5fr 1fr .3fr;
     gap: 1rem;
     align-items: center;
+    /* align-self: flex-end; */
 }
 
-.navbar_container_right_help {
+.navbar_container_right_discover{
+    position: relative;
+    cursor: pointer;
+}
+.navbar_container_right_help{
     position: relative;
     cursor: pointer;
 }
 
 .navbar_container_right_discover_box,
-.navbar_container_right_help_box {
+.navbar_container_right_help_box{
     position: absolute;
-    padding: 1rem 0.5rem;
+    padding: 1rem .5rem;
     box-shadow: var(--box-shadow);
     font-size: 1rem;
     width: 15rem;
     border-radius: 1rem;
     background-color: var(--main-bg-color);
-    z-index: 5; /* Menambah z-index agar elemen overlay muncul di atas */
 }
 
-.navbar_container_right_notify {
+.navbar_container_right_notify{
     position: relative;
     cursor: pointer;
 }
 
-.notify {
+.notify{
     font-size: 2rem;
 }
 
-.navbar_container_right_button {
+.navbar_container_right_button{
     position: relative;
     cursor: pointer;
 }
 
-.navbar_container_right_profile_box {
+.navbar_container_right_profile_box{
     position: relative;
     cursor: pointer;
 }
 
-/* PROFILE ICON */
-.navbar_container_right_profile {
+.navbar_container_right_profile{
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.navbar_container_right_profile:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.navbar_container_right_menuBtn {
+.navbar_container_right_menuBtn{
     display: none;
 }
 
-.menuIcon {
-    font-size: 2rem;
+.menuIcon{
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
-/* SIDEBAR MENU */
-.sideBar {
+/* /////------SIDEBAR */
+
+.sideBar{
     position: fixed;
     top: 0;
     width: 24rem;
@@ -127,75 +122,46 @@
     height: 100vh;
     overflow-y: auto;
     display: none;
-    z-index: 20;
+    z-index: 11111;
 }
 
-.sideBar::-webkit-scrollbar {
+.sideBar::-webkit-scrollbar{
     display: none;
 }
 
-/* RESPONSIVE STYLES */
-
-/* Media Query for small screens */
-@media screen and (max-width: 768px) {
-    .navbar_container {
-        width: 90%;
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .navbar_container{
         grid-template-columns: 1fr 1fr;
     }
 
-    .navbar_container_left {
+    .navbar_container_left{
         grid-template-columns: 1fr;
-        gap: 0.5rem;
     }
 
-    .navbar_container_right {
+    .navbar_container_right{
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
     }
 
-    .navbar_container_right_menuBtn {
+    .navbar_container_right_menuBtn{
         display: block;
     }
 
-    .navbar_container_left_box_input_box {
+    .navbar_container_left_box_input_box{
+        display: none;
+    }
+    .navbar_container_right_discover{
         display: none;
     }
 
-    .navbar_container_right_discover,
-    .navbar_container_right_help,
-    .navbar_container_right_button {
+    .navbar_container_right_help{
         display: none;
     }
 
-    .sideBar {
+    .navbar_container_right_button{
+        display: none;
+    }
+
+    .sideBar{
         display: block;
-        width: 20rem; /* Mengurangi lebar sidebar pada layar kecil */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Adjust font size */
-    .notify {
-        font-size: 1.6rem;
-    }
-
-    .search_icon {
-        font-size: 1.4rem;
-    }
-
-    /* Adjust menu icon and button */
-    .menuIcon {
-        font-size: 1.8rem;
-    }
-
-    .logo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    /* Profile icon size adjustment on smaller screens */
-    .navbar_container_right_profile {
-        width: 35px;
-        height: 35px;
     }
 }

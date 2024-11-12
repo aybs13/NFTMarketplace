@@ -13,6 +13,7 @@ import { HeroSection,
         Collection,
         AudioLive,
         FollowerTab,
+        Slider,
     } from "../components/componentsindex";
 
 const Home = () => {
@@ -23,15 +24,16 @@ const Home = () => {
             <Service /> 
             <BigNFTSilder />
             <Title 
-                heading="Latest Audio Collection"  
+                heading="Audio Collection"  
                 paragraph="Discover the most outstanding NFTs in all topics of life."
             />
             <AudioLive />
-            <Title 
-                heading="New Collection"  
-                paragraph="Discover the most outstanding NFTs in all topics of life."
-            />
             <FollowerTab/>
+            <Title 
+                heading="Explore NFTs Video"  
+                paragraph="Click on play icon and enjoy NFTs video"
+            />
+            <Slider/>
             <Collection />
             <Title 
                 heading="Featured NFTs"  

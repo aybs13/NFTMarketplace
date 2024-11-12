@@ -1,137 +1,74 @@
-/* Sidebar Container */
-.sideBar_box {
+.sideBar_box{
     padding: 2rem;
     border-bottom: 1px solid var(--icons-color);
-    background-color: var(--main-bg-color);
-    height: 100vh; /* Full height for sidebar */
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    background-color:  var(--main-bg-color);
 }
 
-/* Close Button Styling */
-.sideBar_closeBtn {
+.sideBar_box_logo{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.sideBar_closeBtn{
     position: absolute;
-    top: 2rem;
+    top: 3rem;
     right: 2rem;
+    transition: all .2s ease-in-out;
     cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
-    background-color: var(--icons-color);
-    border-radius: 50%;
-    padding: 0.5rem;
-    color: var(--main-bg-color);
+    box-shadow:  var(--box-shadow);
 }
 
-.sideBar_closeBtn:hover {
-    transform: rotate(45deg);
-    background-color: var(--icons-hover-bg-color);
+.sideBar_closeBtn:hover{
+    transform:  rotate(45deg);
 }
 
-/* Text and Menu Sections */
-.sideBar_box p {
-    margin-top: -2rem;
+.sideBar_box p{
+    margin-top:  -2rem;
 }
 
-/* Social Media Section */
-.sideBar_social {
+.sideBar_social{
     display: flex;
     gap: 1.3rem;
     font-size: 1.5rem;
     align-items: center;
 }
 
-.sideBar_social a {
-    padding: 0.5rem;
+.sideBar_social a{
+    padding: .2rem;
     border-radius: 50%;
+    transition:  all .3s ease-in;
     display: grid;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in, box-shadow 0.3s ease;
 }
 
-.sideBar_social a:hover {
-    background-color: var(--icons-color);
-    color: var(--shadow-dark-color);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.sideBar_social a:hover{
+    background-color:  var(--icons-color);
+    color:  var(--shadow-dark-color);
+    box-shadow: 1px solid var(--icons-color);
 }
 
-/* Sidebar Menu Section */
-.sideBar_menu {
+.sideBar_menu{
     padding: 2rem;
     text-transform: uppercase;
     font-weight: 500;
-    border-bottom: 1px solid var(--icons-color);
+    border-bottom:  1px solid var(--icons-color);
 }
 
-.sideBar_menu_box {
+.sideBar_menu_box{
     display: flex;
-    justify-content: space-between;
+    justify-content:  space-between;
     align-items: center;
     cursor: pointer;
 }
 
-/* Discover Section */
-.sideBar_discover {
+.sideBar_discover{
     padding-inline: 1rem;
+
 }
 
-/* Button Section */
-.sideBar_button {
+.sideBar_button{
     padding: 2rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.sideBar_button button {
-    flex: 1; /* Membuat kedua tombol memiliki lebar yang sama */
-    padding: 0.8rem; /* Padding yang seragam */
-    border-radius: 2rem;
-    background-color: var(--icons-color);
-    color: var(--main-bg-color);
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sideBar_button button:hover {
-    background-color: var(--icons-hover-bg-color);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 500px) {
-    .sideBar_box {
-        padding: 1rem; /* Mengurangi padding pada layar kecil */
-    }
-
-    .sideBar_button {
-        flex-direction: column; /* Atur tombol menjadi vertikal */
-        gap: 0.8rem;
-    }
-
-    .sideBar_button button {
-        width: 100%; /* Memenuhi lebar penuh pada perangkat kecil */
-        padding: 0.8rem; /* Mengatur padding tombol lebih nyaman */
-    }
-
-    /* Social Media icons */
-    .sideBar_social {
-        gap: 1rem;
-        font-size: 1.2rem; /* Mengurangi ukuran ikon sosial media di layar kecil */
-    }
-
-    /* Sidebar menu padding dan font size */
-    .sideBar_menu {
-        padding: 1.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Adjust sidebar height on medium screen sizes */
-    .sideBar_box {
-        height: auto; /* Sidebar height adjusts with content */
-    }
+    justify-content: space-between;
 }

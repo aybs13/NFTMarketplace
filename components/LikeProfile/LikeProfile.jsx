@@ -1,11 +1,26 @@
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
-//Internal Import
-import Style from './LikeProfile.module.css';
-
+//INTERNAL IMPORT
+import Style from "./LikeProfile.module.css";
+import images from "../../img";
 const LikeProfile = () => {
-
-    return <div>LikeProfile</div>;
+  const imageArray = [images.user0, images.user2, images.user3, images.user4];
+  return (
+    <div className={Style.like}>
+      {imageArray.map((el, i) => (
+        <div className={Style.like_box} key={i + 1}>
+          <Image
+            src={el}
+            width={15}
+            height={15}
+            key={i + 1}
+            className={Style.like_box_img}
+          />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default LikeProfile;

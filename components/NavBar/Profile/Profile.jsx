@@ -14,7 +14,7 @@ const Profile = () => {
         <div className={style.profile}>
             <div className={style.profile_account}>
                 <Image 
-                    src={images.user1} 
+                    src={images.user0} 
                     alt="user profile" 
                     width={50} 
                     height={50} 
@@ -22,7 +22,7 @@ const Profile = () => {
                 />
 
                 <div className={style.profile_account_info}>
-                    <p>jonson</p>
+                    <p>Ayub Rantealu</p>
                     <small>X038499382920203...</small>
                 </div>
             </div>
