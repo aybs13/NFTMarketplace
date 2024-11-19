@@ -16,11 +16,11 @@ const BigNFTSilder = () => {
     {
       title: "Hello NFT",
       id: 1,
-      name: "Ayub Rantesalu",
+      name: "Daulat Hussain",
       collection: "GYm",
       price: "00664 ETH",
       like: 243,
-      image: images.user0,
+      image: images.user1,
       nftImage: images.nft_image_1,
       time: {
         days: 21,

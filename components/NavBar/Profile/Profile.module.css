@@ -1,63 +1,53 @@
-.profile {
+
+.profile{
     position: absolute;
-    padding: 2rem 1rem; /* Menambah padding horizontal */
+    padding: 2rem .5rem;
     box-shadow: var(--box-shadow);
     font-size: 1rem;
     width: 20rem;
     border-radius: 1rem;
+
     left: -17rem;
     top: 4.5rem;
-    z-index: 10; /* Menurunkan z-index ke nilai yang lebih wajar */
+    z-index: 22222222222;
     background-color: var(--main-bg-color);
 }
 
-/* Akun Profile */
-.profile_account {
+.profile_account{
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem; /* Mengurangi jarak untuk tampilan lebih kompak */
-    padding: 1.5rem 1rem;
+    gap: 2rem;
+    padding: 1.5rem;
 }
 
-.profile_account_img {
+.profile_account_img{
     border-radius: 50%;
-    width: 50px; /* Menambahkan ukuran agar lebih konsisten */
-    height: 50px;
-    object-fit: cover;
 }
 
-.profile_account_info {
-    line-height: 1.2; /* Meningkatkan line-height agar lebih mudah dibaca */
+.profile_account_info{
+    line-height: 0.3;
 }
 
-.profile_account_info p {
+.profile_account_info p{
     font-weight: 600;
-    color: var(--text-color); /* Mengatur warna teks untuk kontras yang lebih baik */
-    margin: 0;
 }
 
-/* Item Menu */
-.profile_menu_one_item {
+.profile_menu_one_item{
     display: flex;
     align-items: center;
-    gap: 1rem; /* Mengurangi gap untuk tampilan lebih ringkas */
-    padding: 0.5rem 1.5rem;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in;
-    border-radius: 0.3rem;
-    cursor: pointer;
+    gap: 2rem;
+    padding: 0rem 1.5rem;
+    transition:  all .3s ease-in;
 }
 
-.profile_menu_one_item:hover {
+.profile_menu_one_item:hover{
     background-color: var(--icons-color);
     color: var(--shadow-dark-color);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Menambah bayangan saat hover */
+    border-radius: .3rem;
 }
 
-/* Efek Transisi */
-.profile_menu_one_item svg {
-    transition: transform 0.3s ease-in-out;
-}
-
-.profile_menu_one_item:hover svg {
-    transform: scale(1.1); /* Membesarkan ikon sedikit saat hover */
+@media screen and (max-width: 35em) {
+    .profile{
+        left: -13.5rem;
+    }
 }

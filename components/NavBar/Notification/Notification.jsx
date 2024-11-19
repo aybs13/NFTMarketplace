@@ -12,7 +12,7 @@ const Notification = () => {
       <div className={Style.notification_box}>
         <div className={Style.notification_box_img}>
           <Image
-            src={images.user0}
+            src={images.user1}
             alt="profile image"
             width={50}
             height={50}
@@ -20,7 +20,7 @@ const Notification = () => {
           />
         </div>
         <div className={Style.notification_box_info}>
-          <h4>Ayub Rantesalu</h4>
+          <h4>Shoaib Akhter</h4>
           <p>Measure action your user...</p>
           <small>3 minutes ago</small>
         </div>

@@ -11,7 +11,7 @@ const Slider = () => {
   const FollowingArray = [
     {
       background: images.creatorbackground3,
-      user: images.user0,
+      user: images.user3,
     },
     {
       background: images.creatorbackground4,

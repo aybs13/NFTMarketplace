@@ -7,7 +7,7 @@
 
 .collection_title{
     width: 35rem;
-    margin: 0 auto;
+    margin:  0 auto;
     padding: 0 0 6rem 0;
     text-align: center;
 }
@@ -37,7 +37,7 @@
     border-radius: 4rem;
     cursor: pointer;
     border: 1px solid var(--icons-color);
-    transition: all .3s ease-in;
+    transition:  all .3s ease-in;
 }
 
 .collection_collections_btn button:hover{
@@ -46,7 +46,7 @@
 }
 
 .collection_box{
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,9 +54,13 @@
 }
 
 
-@media screen and (min-device-width: 320px)  and (max-device-width: 425px){
+@media screen and (min-device-width: 320px) and (max-device-width: 425px) {
     .collection_title{
         width: 90%;
+    }
+
+    .collection_title h2{
+        font-size: 2rem;
     }
 
     .collection_box{
@@ -70,7 +74,7 @@
     }
 }
 
-@media  screen and (min-device-width: 427px)  and (max-device-width: 1024px){
+@media screen and (min-device-width: 427px) and (max-device-width: 1024px) {
     .collection_title{
         width: 90%;
     }
